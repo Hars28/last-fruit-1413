@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./Navbar.module.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
@@ -6,7 +6,9 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import LocalOfferOutlinedIcon from "@mui/icons-material/LocalOfferOutlined";
 import { Link } from "react-router-dom";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+import { AppContext } from "../../Context/AppContext";
 const Navbar = () => {
+  const {cartData}=useContext(AppContext)
   return (
     <div className={styles.navbar}>
       <div className={styles.nav_top}>
@@ -24,7 +26,7 @@ const Navbar = () => {
         </div>
         <div className={styles.search_bar}>
           <input type="text" placeholder="Search Best Buy" />
-          <SearchIcon />
+          <Link to="/products"><SearchIcon /></Link>
         </div>
         <div className={styles.store_time}>
           <LocalOfferOutlinedIcon />
@@ -37,6 +39,8 @@ const Navbar = () => {
           <div className={styles.cart}>
             <ShoppingCartOutlinedIcon />
             <h3>Cart</h3>
+            <span style={{marginLeft:"5px",borderRadius:"50%",backgroundColor:"white",color:"blue"}}>{cartData.length}</span>
+            
           </div>
         </Link>
       </div>

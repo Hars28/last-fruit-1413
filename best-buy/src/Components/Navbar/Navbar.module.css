@@ -74,6 +74,11 @@
     color: #ffff;
     font-size: 20px;
   }
+  .signin{
+    display: flex;
+    color: #ffff;
+    font-size: 20px;
+  }
   .cart svg {
     font-size: 32px;
     margin-right: 5px;

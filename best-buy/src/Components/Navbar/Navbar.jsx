@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import { AppContext } from "../../Context/AppContext";
 const Navbar = () => {
-  const {cartData}=useContext(AppContext)
+  const {cartData,auth}=useContext(AppContext)
   return (
     <div className={styles.navbar}>
       <div className={styles.nav_top}>
@@ -32,10 +32,19 @@ const Navbar = () => {
           <LocalOfferOutlinedIcon />
           <h3>Aiea</h3>
         </div>
-        <div style={{ display: "none" }} className={styles.account_nav_top}>
-          <AccountCircleOutlinedIcon />
-        </div>
-        <Link to="/cart">
+        
+          {auth===false?<Link to="/signin"><div  className={styles.signin}>
+        <AccountCircleOutlinedIcon /><h3>SignIn</h3>
+       </div></Link>:<div  className={styles.signin}>
+         <AccountCircleOutlinedIcon />
+        </div>}
+        
+        {auth===false?
+          <Link to="/cart"><div className={styles.cart}>
+            <ShoppingCartOutlinedIcon />
+            <h3>Cart</h3>
+            
+          </div></Link>:<Link to="/cart">
           <div className={styles.cart}>
             <ShoppingCartOutlinedIcon />
             <h3>Cart</h3>
@@ -43,6 +52,8 @@ const Navbar = () => {
             
           </div>
         </Link>
+        }
+        
       </div>
       <div className={styles.nav_bottom}>
         <div className={styles.nav_bottom_left}>
@@ -57,12 +68,13 @@ const Navbar = () => {
           </Link>
         </div>
         <div className={styles.nav_bottom_right}>
-          <Link to="/signin" className={styles.account_nav_bottom}>
+          {auth===false?<Link to="/signin" className={styles.account_nav_bottom}>
             <span>
               <AccountCircleOutlinedIcon />
             </span>{" "}
             Account <span>⌵</span>
-          </Link>
+          </Link>:null}
+          
           <Link to="/i">
             Recently Viewed <span>⌵</span>
           </Link>

@@ -9,7 +9,7 @@ export default function AppContextProvider({children}){
         setQty(qty+val)
     }
     return(
-        <AppContext.Provider value={{handleQty,cartData,setCartData}}>
+        <AppContext.Provider value={{handleQty,cartData,setCartData,auth,setAuth}}>
             {children}
         </AppContext.Provider>
     )

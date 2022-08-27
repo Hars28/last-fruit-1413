@@ -7,7 +7,6 @@ const OrderSummary = () => {
   const [totalCost, setTotalCost] = useState(0);
   const [tax, setTax] = useState(0);
   const [total, setTotal] = useState(0);
-  const [qty,setQty]=useState(1)
   useEffect(() => {
     const t_c = cartData.reduce((total, a) => {
       return total + a.quantity * a.SalePrice;

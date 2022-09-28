@@ -13,14 +13,14 @@
 
 <h2>Some screenshots of this website:</h2>
 
+<h3 margin="auto">Home Page</h3>
 <img src="https://i.postimg.cc/0N7vCXPc/bb-home.png" alt="Home"/>
-<h3 margin="auto>Home Page</h3>
 
+<h3 margin="auto">Signin Page</h3>
 <img src="https://i.postimg.cc/PJs2QKfz/bb-signin.png" alt="Signin"/>
-<h3 margin="auto>Signin Page</h3>
 
+<h3 margin="auto">Products Page</h3>
 <img src="https://i.postimg.cc/RCHYJJCL/bb-products.png" alt="Products"/>
-<h3 margin="auto>Products Page</h3>
 
+<h3 margin="auto">Cart Page</h3>
 <img src="https://i.postimg.cc/TYPWHgyr/bb-cart.png" alt="Cart"/>
-<h3 margin="auto>Cart Page</h3>

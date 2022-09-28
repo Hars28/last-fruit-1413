@@ -12,6 +12,7 @@
 <p>4) external Library MUI</p>
 
 <h2>Some screenshots of this website:</h2>
+
 <img src="https://i.postimg.cc/0N7vCXPc/bb-home.png" alt="Home"/>
 <h3 margin="auto>Home Page</h3>
 
